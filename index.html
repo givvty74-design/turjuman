@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ترجمان برو | مترجم الملفات الاحترافي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-file-invoice"></i>
+                <span>ترجمان برو</span>
+            </div>
+            <div class="nav-links">
+                <button id="theme-toggle" class="btn-icon"><i class="fas fa-sun"></i></button>
+                <div class="lang-selector">
+                    <select id="ui-lang">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <h1 id="title">مترجم الملفات الذكي</h1>
+            <p id="subtitle">ترجم ملفاتك مع الحفاظ الكامل على التنسيق والبرمجة</p>
+        </header>
+
+        <section class="translator-card glass">
+            <div class="settings-row">
+                <div class="lang-group">
+                    <label id="label-from">من:</label>
+                    <select id="source-lang">
+                        <option value="auto">كشف تلقائي</option>
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">French</option>
+                        <option value="es">Spanish</option>
+                        <option value="de">German</option>
+                    </select>
+                </div>
+                <button id="swap-btn" class="btn-ghost"><i class="fas fa-exchange-alt"></i></button>
+                <div class="lang-group">
+                    <label id="label-to">إلى:</label>
+                    <select id="target-lang">
+                        <option value="en">English</option>
+                        <option value="ar" selected>العربية</option>
+                        <option value="fr">French</option>
+                        <option value="es">Spanish</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="drop-zone" class="drop-zone">
+                <input type="file" id="file-input" hidden accept=".txt,.html,.htm,.md">
+                <div class="drop-content">
+                    <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                    <h3 id="drop-text">اسحب ملفك هنا أو انقر للاختيار</h3>
+                    <p id="drop-subtext">يدعم: TXT - HTML - MD</p>
+                </div>
+            </div>
+
+            <div id="file-info" class="file-info hidden">
+                <div class="file-details">
+                    <i class="fas fa-file-alt"></i>
+                    <span id="file-name">filename.txt</span>
+                </div>
+                <button id="remove-file" class="btn-danger"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="actions">
+                <button id="translate-btn" class="btn-primary" disabled>
+                    <i class="fas fa-magic"></i> <span id="btn-text">ابدأ الترجمة</span>
+                </button>
+            </div>
+
+            <div id="progress-container" class="progress-container hidden">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <p id="progress-status">جاري المعالجة...</p>
+            </div>
+
+            <div id="result-actions" class="result-actions hidden">
+                <button id="download-btn" class="btn-success">
+                    <i class="fas fa-download"></i> <span id="download-text">تحميل الملف المترجم</span>
+                </button>
+                <button id="reset-btn" class="btn-ghost">ترجمة ملف آخر</button>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <h4 id="feature-1-title">آمن تماماً</h4>
+                <p id="feature-1-desc">تتم معالجة ملفاتك بأمان ولا يتم تخزينها</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-code"></i>
+                <h4 id="feature-2-title">يحفظ الأكواد</h4>
+                <p id="feature-2-desc">يحافظ على وسوم HTML وتنسيقات Markdown</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-bolt"></i>
+                <h4 id="feature-3-title">سرعة فائقة</h4>
+                <p id="feature-3-desc">تقنيات معالجة متوازية لترجمة سريعة</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 ترجمان برو - بوابة الترجمة الاحترافية</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
